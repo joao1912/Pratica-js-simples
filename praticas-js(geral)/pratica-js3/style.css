@@ -1,0 +1,17 @@
+body{
+    background-color: #95B3BF;
+    text-align: center;
+    
+}
+main {
+    background-color: white;
+    width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 5px 5px 6px #276573a1 ;
+}
+h1 {
+    color: #04D9D9;
+    text-shadow: 1px 1px 2px #04b6b69f;
+}
