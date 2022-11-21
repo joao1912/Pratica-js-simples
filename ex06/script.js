@@ -4,6 +4,7 @@ let cobertura = document.getElementById("coberturaForm")
 let valor = document.getElementById("valorForm")
 let botao_pronto = document.getElementById("bot_pronto")
 let botao_add = document.getElementById("bot_add")
+let botao_apagar = document.getElementById("bot_apagar")
 let quantBolas = document.getElementById("bolaSabor")
 let Totvalores = 0
 
@@ -63,6 +64,7 @@ function addBola() {
 
 
 function Montar() {
+    botao_apagar.removeAttribute("disabled","disabled")
     botao_pronto.setAttribute("disabled","disabled")
     for (let c = 0 ; c < 3 ; c++) {
         if (tipoCasquinha.tipo[c].checked) {
@@ -81,6 +83,38 @@ function Montar() {
          
     cobertura.innerHTML = `Cobertura: ${coberturaResp}`
 
-    valor.innerHTML = `R$ ${Totvalores}`
+    valor.innerHTML = `Valor a ser pago: R$ ${Totvalores}`
         
+}
+
+function apagarT() {
+    botao_apagar.setAttribute("disabled","disabled")
+    bolasResp = [] 
+    casquinhaResp = []
+    coberturaResp = []
+
+    quantBolas.innerHTML = `Qual o sabor da <strong>1o</strong> bola que deseja adicionar.`
+
+    bolas.innerHTML = `Bolas: `
+        
+    casquinha.innerHTML = `Casquinha:`
+         
+    cobertura.innerHTML = `Cobertura: `
+
+    valor.innerHTML = `Valor a ser pago:`
+
+    Totvalores = 0
+
+    detectorADD = 1
+
+    botao_add.removeAttribute("disabled","disabled")
+
+    for (let c = 0 ; c < 5 ; c++) {
+        tipoSabor.tipo[c].removeAttribute("disabled","disabled")
+        if (c <= 2){
+            tipoCobertura.tipo[c].setAttribute("disabled","disabled")
+            tipoCasquinha.tipo[c].setAttribute("disabled","disabled")
+        }
+    }
+
 }
