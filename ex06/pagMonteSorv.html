@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorveteria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header {
+            border-radius:  10px;
+        }
+        main > div {
+            background-color: cadetblue;
+            margin: 20px;
+            border-radius: 7px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main > div#sorvete {
+            background-color:turquoise;
+            margin: 20px;
+            border-radius: 7px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div#seuSorvete {
+            font: normal 1.5em Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Monte Seu Sorvete</h1>
+    </header>
+    <main>
+        <div id="bolaSabor">Qual o sabor da bola que deseja adicionar.
+            <br>
+            <input 
+            type="radio" 
+            name="sabor" 
+            id="chocolate"
+            checked>
+            <label for="chocolate">Chocolate</label>
+            <input 
+            type="radio" 
+            name="sabor" 
+            id="morango">
+            <label for="morango">morango</label>
+            <input 
+            type="radio"
+            name="sabor" 
+            id="limao">
+            <label for="limao">Limão</label>
+            <input 
+            type="radio" 
+            name="sabor" 
+            id="flocos">
+            <label for="flocos">Flocos</label>
+            <input 
+            type="radio" 
+            name="sabor" 
+            id="avela">
+            <label for="avela">Avelã</label>
+        </div>
+        <div id="tipoCasquinha">Tipo de Casquinha
+            <br>
+            <input 
+            type="radio" 
+            name="casquinha" 
+            id="cesta"
+            checked>
+            <label for="cesta">Cesta</label>
+            <input 
+            type="radio" 
+            name="casquinha" 
+            id="cone">
+            <label for="cone">Cone</label>
+            <input 
+            type="radio" 
+            name="casquinha" 
+            id="megacone">
+            <label for="megacone">Mega Cone</label>
+        </div>
+        <div id="tipoCobertura">Tipo de Cobertura
+            <br>
+            <input 
+            type="radio" 
+            name="corbertura" 
+            id="cobChocolate"
+            checked>
+            <label for="cobChocolate">Chocolate</label>
+            <input 
+            type="radio" 
+            name="corbertura" 
+            id="cobMorango">
+            <label for="cobMorango">Morango</label>
+            <input 
+            type="radio" 
+            name="corbertura" 
+            id="cobMaracuja">
+            <label for="cobMaracuja">Maracuja</label>
+        </div>
+        <div id="sorvete">
+            <div id="seuSorvete">Seu Sorvete</div>
+            
+        </div>
+    </main>
+</body>
+</html>
