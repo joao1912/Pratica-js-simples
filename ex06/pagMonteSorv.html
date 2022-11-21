@@ -19,7 +19,7 @@
         }
 
         main > div#sorvete {
-            background-color:turquoise;
+            background-color:lightblue;
             margin: 20px;
             border-radius: 7px;
             text-align: center;
@@ -36,7 +36,7 @@
         <h1>Monte Seu Sorvete</h1>
     </header>
     <main>
-        <div id="bolaSabor">Qual o sabor da bola que deseja adicionar.
+        <div><div id="bolaSabor">Qual o sabor da <strong>1o</strong> bola que deseja adicionar.</div>
             <br>
             <input 
             type="radio" 
@@ -63,7 +63,8 @@
             type="radio" 
             name="sabor" 
             id="avela">
-            <label for="avela">Avelã</label>
+            <label style="margin-right: 10px ;" for="avela">Avelã</label>
+            <input id="bot_add" type="button" value="Adicionar" onclick="addBola()">
         </div>
         <div id="tipoCasquinha">Tipo de Casquinha
             <br>
@@ -71,17 +72,19 @@
             type="radio" 
             name="casquinha" 
             id="cesta"
-            checked>
+            checked disabled>
             <label for="cesta">Cesta</label>
             <input 
             type="radio" 
             name="casquinha" 
-            id="cone">
+            id="cone"
+            disabled>
             <label for="cone">Cone</label>
             <input 
             type="radio" 
             name="casquinha" 
-            id="megacone">
+            id="megacone"
+            disabled>
             <label for="megacone">Mega Cone</label>
         </div>
         <div id="tipoCobertura">Tipo de Cobertura
@@ -90,26 +93,46 @@
             type="radio" 
             name="corbertura" 
             id="cobChocolate"
-            checked>
+            checked
+            disabled>
             <label for="cobChocolate">Chocolate</label>
             <input 
             type="radio" 
             name="corbertura" 
-            id="cobMorango">
+            id="cobMorango"
+            disabled>
             <label for="cobMorango">Morango</label>
             <input 
             type="radio" 
             name="corbertura" 
-            id="cobMaracuja">
+            id="cobMaracuja"
+            disabled>
             <label for="cobMaracuja">Maracuja</label>
         </div>
+        <div>
+            <input id ="bot_pronto" type="button" value="Pronto" onclick="Montar()" disabled>
+        </div>
         <div id="sorvete">
-            <div id="seuSorvete">Seu Sorvete</div>
-            
+            <div>
+                <div id="seuSorvete">Seu Sorvete</div>
+            </div>
+            <div>
+                <div id = "bolasForm">Bolas:</div> 
+            </div>
+            <div>
+                <div id="casquinhaForm">Casquinha:</div> 
+            </div>
+            <div>
+                <div id="coberturaForm">Cobertura:</div> 
+            </div>
+            <div>
+                <div id="valorForm">Valor a ser pago:</div> 
+            </div>
         </div>
     </main>
     <footer>
         <p><a href="index.html">voltar para o inicio(temporário)</a></p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
