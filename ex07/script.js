@@ -12,20 +12,65 @@ let tabResp = document.getElementById("respTabela")
 let detecerro = 0
 
 function Converter() {
-    let soma = ( valor0.value * (2**0) + valor1.value * (2**1) + valor2.value * (2**2) + valor3.value * (2**3) + valor4.value * (2**4) + valor5.value * (2**5) + valor6.value * (2**6) + valor7.value * (2**7) )
-    resposta.innerHTML = `Convertido para decimal: ${soma}`
 
+    if (valor0.value > 1 || valor0.value < 0) {
+        detecerro = 1
+        alert("ba")
+    } 
+    
+    if (valor1.value > 1 || valor1.value < 0) {
+        detecerro = 1
+    }  
+    
+    if (valor2.value > 1 || valor2.value < 0) {
+        detecerro = 1
+    } 
+
+    if (valor3.value > 1 || valor3.value < 0) {
+        detecerro = 1
+    }  
+    if (valor4.value > 1 || valor4.value < 0 ) {
+        detecerro = 1
+    } 
+
+    if (valor5.value > 1 || valor5.value < 0) {
+        detecerro = 1
+    }  
+    
+    if (valor6.value > 1 || valor6.value < 0) {
+        detecerro = 1
+    }  
+    
+    if (valor7.value > 1 || valor7.value < 0) {
+        detecerro = 1
+    }
+   
+
+    if (detecerro == 0) {
+        let soma = ( valor0.value * (2**0) + valor1.value * (2**1) + valor2.value * (2**2) + valor3.value * (2**3) + valor4.value * (2**4) + valor5.value * (2**5) + valor6.value * (2**6) + valor7.value * (2**7) )
+        resposta.innerHTML = `Convertido para decimal: ${soma}`
+    } else {
+        detecerro = 0
+        alert("[ERRO]: Use somente os valores '0' e '1' !!!")
+    }
 }
 
 function Limpar() {
-    valor0.value = ``
-    valor1.value = ``
-    valor2.value = ``
-    valor3.value = ``
-    valor4.value = ``
-    valor5.value = ``
-    valor6.value = ``
-    valor7.value = ``
+    if (valor0.value + valor1.value + valor2.value + valor3.value + valor4.value + valor5.value + valor6.value + valor7.value == 0 ) {
+        alert("[ERRO]: insira valores antes de apagar.")
+    } else {
+        valor0.value = ``
+        valor1.value = ``
+        valor2.value = ``
+        valor3.value = ``
+        valor4.value = ``
+        valor5.value = ``
+        valor6.value = ``
+        valor7.value = ``
 
-    resposta.innerHTML = `<strong>=> </strong>`
+        resposta.innerHTML = `<strong>=> </strong>`
+    }
+    
+    
+    
 }
