@@ -1,0 +1,1 @@
+conversor de binario para decimal

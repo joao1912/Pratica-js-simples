@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor binário para decimal</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        header {
+            background-color: cadetblue;
+            padding: 10px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+
+        header > h1 {
+            text-align: center;
+            font: bold 2em Arial,sans-serif;
+            text-decoration: underline;
+        }
+
+        main > div > input.binar {
+            width: 30px;
+        }
+
+        main > div#valoresBinarios {
+            background-color: cadetblue;
+            padding: 10px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        input#botao1 {
+            margin-left: 15px;
+        }
+
+        input#botao2 {
+            margin-left: 5px;
+        }
+
+        div#respTabela {
+            background-color: cadetblue;
+            margin-top: 20px;
+            border-radius: 5px;
+            padding:5px;
+            
+        }
+
+        div#respTabela > div#resp {
+            margin-left: 15px;
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bin2Dec</h1>
+    </header>
+    <main>
+        <div id="valoresBinarios">
+            <input class = "binar" type="number" name="binario" id="val7">
+            <input class = "binar" type="number" name="binario" id="val6">
+            <input class = "binar" type="number" name="binario" id="val5">
+            <input class = "binar" type="number" name="binario" id="val4">
+            <input class = "binar" type="number" name="binario" id="val3">
+            <input class = "binar" type="number" name="binario" id="val2">
+            <input class = "binar" type="number" name="binario" id="val1">
+            <input class = "binar" type="number" name="binario" id="val0">
+            <input id = "botao1" type="button" value="Limpar" onclick="Limpar()">
+            <input id = "botao2" type="button" value="Converter" onclick="Converter()">
+        </div>
+        
+        <div id="respTabela">
+            <div id="resp"><strong>=></strong></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
