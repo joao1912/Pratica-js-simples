@@ -1,5 +1,105 @@
 body {
     background-color: #11CCD4;
-    font: normal 17pt arial;
+    font: normal 1.2em arial;
 }
 
+header {
+    background-color: #1166D4;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(92, 92, 92, 0.514);
+    color: #14F6BF;
+    text-shadow: 1px 1px 2px rgba(109, 107, 107, 0.768);
+}
+
+
+
+nav {
+    background-color: #1166D4;
+    padding: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(92, 92, 92, 0.514);
+    margin-bottom: 15px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #14F6BF;
+    font-weight: bold;
+    margin-left: 20px;
+    text-shadow: 1px 1px 2px rgba(109, 107, 107, 0.768);
+    padding: 5px;
+    transition: all 0.3s ease-out;
+    
+}
+
+
+nav > a:hover {
+    color: #11CCD4;
+    background-color: #0b4086b5;
+    border-radius: 5px;
+}
+
+main {
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+    margin: auto;   /*arruma aqui*/
+    width: 80%;
+}
+
+footer > div#pescador {
+    width: 200px;
+    height: 400px;
+    background-color: cadetblue;
+    float: right;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(116, 113, 113, 0.584);
+}
+
+div#pescador > div > p {
+    font: normal 14px Arial,sans-serif;
+    text-indent: 10px;
+    text-align: center;
+}
+
+div#pescador > img{
+    margin: 20px 0px 0px 35px;
+}
+
+main > div {
+    margin: auto auto auto auto;
+}
+
+#produtos > h2 {
+    font: normal 25px Arial,sans-serif;
+    text-align: center;
+}
+
+#precos > h2 {
+    font: normal 25px Arial,sans-serif;
+    text-align: center;
+}
+
+#estoque > h2 {
+    font: normal 25px Arial,sans-serif;
+    text-align: center;
+}
+
+#etapas > h2 {
+    font: normal 25px Arial,sans-serif;
+    text-align: center;
+}
+
+section > section.geral {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px;
+}
