@@ -1,0 +1,16 @@
+body {
+    background-color: lightgrey;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+}
+
+div#quadrado {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    margin: auto;
+    border-radius: 10px;
+}
