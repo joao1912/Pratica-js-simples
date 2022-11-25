@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: cadetblue;
+
+}
+
+header {
+    background-color: lightgray;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.364);
+    margin-bottom: 60px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+main {
+    background-color: antiquewhite;
+    margin: auto;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
+div#tela {
+    background-color: lightgreen;
+    width: 350px;
+    height: 70px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(122, 122, 122, 0.41);
+    
+    
+}
+
+main div#areasTeclas {
+    background-color: seashell;
+    width: 87%;
+    height: 400px;
+    margin: auto;
+}
+
+main div.fundoTeclas {
+    background-color: seashell;
+    width: 87%;
+    height: 400px;
+    margin: auto;
+}
+
+main div#suporteTela {
+    margin-bottom: 15px;
+}
+
+main div#teclasC1 {
+    padding: 20px 0px 5px 20px;
+}
+
+main div#teclasC2 {
+    padding: 0px 0px 5px 20px;
+}
+
+main div#teclasC3 {
+    padding:0px 20px;
+}
+
+main div#teclaC1 {
+    background-color: cadetblue;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    display: inline-block;
+}
+
+main div.tecla {
+    background-color: cadetblue;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    display: inline-block;
+}
+
+
+
