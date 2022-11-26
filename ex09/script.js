@@ -10,6 +10,8 @@ const sete = document.querySelector("div#tec7")
 const oito = document.querySelector("div#tec8")
 const nove = document.querySelector("div#tec9")
 const zero  = document.querySelector("div#tec0")
+const maisMenos = document.querySelector("div#trocaSinal")
+const ponto = document.querySelector("div#ponto")
 
 const dividir = document.getElementById("tecsCalc_divisao")
 const soma = document.getElementById("tecsCalc_soma")
@@ -23,51 +25,61 @@ let sinal = ""
 
 um.addEventListener("click", function(){
     valor += "1"
+    telaExibidora.innerHTML = `${valor}`
     calculador()
 })
 
 dois.addEventListener("click", function(){
     valor += "2"
+    telaExibidora.innerHTML = `${valor}`
     calculador()
 })
 
 tres.addEventListener("click", function(){
     valor += "3"
+    telaExibidora.innerHTML = `${valor}`
     calculador()
 })
 
 quatro.addEventListener("click", function(){
     valor += "4"
+    telaExibidora.innerHTML = `${valor}`
     calculador()
 })
 
 cinco.addEventListener("click", function(){
     valor += "5"
+    telaExibidora.innerHTML = `${valor}`
     calculador()
 })
 
 seis.addEventListener("click", function(){
     valor += "6"
+    telaExibidora.innerHTML = `${valor}`
     calculador()
 })
 
 sete.addEventListener("click", function(){
     valor += "7"
+    telaExibidora.innerHTML = `${valor}`
     calculador()
 })
 
 oito.addEventListener("click", function(){
     valor += "8"
+    telaExibidora.innerHTML = `${valor}`
     calculador()
 })
 
 nove.addEventListener("click", function(){
     valor += "9"
+    telaExibidora.innerHTML = `${valor}`
     calculador()
 })
 
 zero.addEventListener("click", function(){
     valor += "0"
+    telaExibidora.innerHTML = `${valor}`
     calculador()
 })
 
@@ -109,7 +121,6 @@ function calculador() {
         valor = Number(valorSecundario) / Number(valor)
     }
 
-    alert(valor)
 
 }
 

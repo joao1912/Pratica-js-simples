@@ -57,8 +57,8 @@ main div.fundoTeclas {
 
 main div.tecla {
     background-color: cadetblue;
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 55px;
     text-align: center;
     display:inline-flex;
     border-radius: 5px;
@@ -66,10 +66,12 @@ main div.tecla {
     justify-content: center;
 }
 
-
+main div.teclaC0 {
+    padding: 20px 0px 5px 23px;
+}
 
 main div#teclasC1 {
-    padding: 23px 0px 5px 23px;
+    padding: 14px 0px 5px 23px;
 }
 
 main div#teclasC2 {
@@ -81,7 +83,7 @@ main div#teclasC3 {
 }
 
 main div#teclasC4 {
-    padding:18px 0px 5px 23px;
+    padding:20px 0px 5px 23px;
 }
 
 main div#teclaC1 {
@@ -93,20 +95,37 @@ main div#teclaC1 {
 }
 
 
+main div#reset {
+    margin: 20px 0px 5px 25px;
+    width: 50px;
+    height: 50px;
+}
+
+main div#trocaSinal {
+    width: 154px;
+    height: 50px;
+    margin: 20px 5px 5px 5px;
+}
+
 main div#tecsCalc_divisao  {
-    margin-left: 10px;
+    margin-left: 24px;
+    width: 70px;
 }
 
 main div#tecsCalc_subtracao {
-    margin-left: 10px;
+    margin-left: 24px;
+    width: 70px;
 }
 
 main div#tecsCalc_soma {
-    margin-left: 10px;
+    margin-left: 24px;
+    width: 70px;
 }
 
 main div#tecsCalc_porcentagem {
-    
+    width: 50px;
+    height: 50px;
+    margin: 0px 0px 0px 6px;
 }
 
 main div#tecigual {
@@ -114,17 +133,6 @@ main div#tecigual {
     width: 145px;
  }
 
- main div#limparBut {
-    border-radius: 15px;
-    margin-top: 22px;
-    margin-left: 24px;
-    font-size: 16px;
-    background-color: cadetblue;
-    width: 47px;
-    padding: 3px;
-    text-align: center;
-    box-shadow: 0px 0px 4px rgba(98, 95, 95, 0.558);
- }
 
 
 
