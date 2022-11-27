@@ -102,9 +102,15 @@ main div#reset {
 }
 
 main div#trocaSinal {
-    width: 154px;
+    width: 50px;
     height: 50px;
     margin: 20px 5px 5px 5px;
+}
+
+main div#tecMultiplica {
+    margin-left: 21px;
+    width: 70px;
+    
 }
 
 main div#tecsCalc_divisao  {
