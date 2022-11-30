@@ -21,7 +21,6 @@ const igual = document.getElementById("tecigual")
 
 let valortot = 0
 let valor = ""
-let sinal = ""
 let numero = 0
 let detec_tela = 0
 
