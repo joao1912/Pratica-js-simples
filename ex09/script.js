@@ -19,42 +19,22 @@ const subtracao = document.getElementById("tecsCalc_subtracao")
 const porcento = document.getElementById("tecsCalc_porcentagem")
 const igual = document.getElementById("tecigual")
 
-let valortot = 0
 let valor = ""
-let numero = 0
-let detec_tela = 0
-
-let calc = {
-    valor_amz: 0,
-    sinal_amz: undefined
-}
+let valor2 = ""
+let sinal = ""
+let detectot_sinal = "desativado"
 
 um.addEventListener("click", function(){
-    if (detec_tela == 1) {
-        valor = ""
-        detec_tela = 0
-        telaExibidora.innerHTML = ``
-    }
     valor += "1"
-    numero = 1
-    telaExibidora.innerHTML = `${valor}`
+
 })
 
 dois.addEventListener("click", function(){
-    if (detec_tela == 1) {
-        valor = ""
-        detec_tela = 0
-        telaExibidora.innerHTML = ``
-    }
     valor += "2"
-    numero = 2
-    telaExibidora.innerHTML = `${valor}`
 })
 
 tres.addEventListener("click", function(){
-    numero = 3
     valor += "3"
-    telaExibidora.innerHTML = `${valor}`
 })
 
 quatro.addEventListener("click", function(){
@@ -102,14 +82,48 @@ zero.addEventListener("click", function(){
 
 
 dividir.addEventListener("click", function(){
-    if (calc.sinal_amz != undefined) {
-        calculador()
+    
+    
+    if(detectot_sinal == "desativado") {
+        if (sinal == "dividir") {
+            /* exibir o sinal sem concatenar */ 
+            detectot_sinal = "ativado"
+            valor = ""
+        } else {
+            sinal = "dividir"
+            detectot_sinal = "ativado"
+            valor2 = valor
+            valor = ""
+            /*sinal aparece na tela*/
+        } 
     } else {
-        calc.sinal_amz = "divisao"
-        calc.valor_amz = numero
-        valor = ""
+        if(valor != "") {
+            /* vai calcular,valor2 = resultado, apagar a tela, e por ultimo exibir o resultado*/
+            detectot_sinal = "desativado"
+            valor = ""
+        }
+        sinal = "dividir"
+        /*troca o sinal exibido na tela*/
     }
+
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 soma.addEventListener("click", function(){
     if (calc.sinal_amz != undefined) {
@@ -149,8 +163,8 @@ igual.addEventListener("click", function(){
 
 function calculador() {
     let resultado = 0
-    if (calc.sinal_amz == "divisao") {
-        resultado = (calc.valor_amz / numero)
+    if (sinal == "dividir") {
+        resultado = (Number("")/ numero)
     }
     if(calc.sinal_amz == "soma") {
         resultado = (calc.valor_amz + numero)
