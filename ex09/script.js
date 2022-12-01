@@ -22,11 +22,11 @@ const igual = document.getElementById("tecigual")
 let valor = ""
 let valor2 = ""
 let sinal = ""
-let detectot_sinal = "desativado"
+let detector_sinal = "desativado"
 
 um.addEventListener("click", function(){
     valor += "1"
-
+    telaExibidora.innerHTML = `${valor}`
 })
 
 dois.addEventListener("click", function(){
@@ -87,19 +87,20 @@ dividir.addEventListener("click", function(){
     if(detectot_sinal == "desativado") {
         if (sinal == "dividir") {
             /* exibir o sinal sem concatenar */ 
-            detectot_sinal = "ativado"
+            detector_sinal = "ativado"
             valor = ""
         } else {
             sinal = "dividir"
-            detectot_sinal = "ativado"
+            detector_sinal = "ativado"
             valor2 = valor
             valor = ""
-            /*sinal aparece na tela*/
+            telaExibidora.innerHTML = ``  /**/ 
+            telaExibidora.innerHTML = `${valor2} ÷`
         } 
     } else {
         if(valor != "") {
             /* vai calcular,valor2 = resultado, apagar a tela, e por ultimo exibir o resultado*/
-            detectot_sinal = "desativado"
+            detector_sinal = "desativado"
             valor = ""
         }
         sinal = "dividir"
