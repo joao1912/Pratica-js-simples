@@ -1,5 +1,6 @@
 let telaExibidora = document.querySelector("div#tela")
 
+/* telaSinal */
 const um = document.querySelector("div#tec1")
 const dois = document.querySelector("div#tec2")
 const tres = document.querySelector("div#tec3")
@@ -26,6 +27,7 @@ let detector_sinal = "desativado"
 
 um.addEventListener("click", function(){
     valor += "1"
+    telaExibidora.innerHTML = ``
     telaExibidora.innerHTML = `${valor}`
 })
 
@@ -86,7 +88,7 @@ dividir.addEventListener("click", function(){
     
     if(detectot_sinal == "desativado") {
         if (sinal == "dividir") {
-            /* exibir o sinal sem concatenar */ 
+            telaSinal.innerHTML = `÷`          /* VER PORQUE AQUI NAO TEM INNERHTML *ARRUME* */ 
             detector_sinal = "ativado"
             valor = ""
         } else {
@@ -94,12 +96,12 @@ dividir.addEventListener("click", function(){
             detector_sinal = "ativado"
             valor2 = valor
             valor = ""
-            telaExibidora.innerHTML = ``  /**/ 
-            telaExibidora.innerHTML = `${valor2} ÷`
+            telaExibidora.innerHTML = ``
+            telaExibidora.innerHTML = `${valor2}`
         } 
     } else {
         if(valor != "") {
-            /* vai calcular,valor2 = resultado, apagar a tela, e por ultimo exibir o resultado*/
+            calculador()
             detector_sinal = "desativado"
             valor = ""
         }
@@ -165,7 +167,7 @@ igual.addEventListener("click", function(){
 function calculador() {
     let resultado = 0
     if (sinal == "dividir") {
-        resultado = (Number("")/ numero)
+        resultado = (Number(valor2) / Number(valor))
     }
     if(calc.sinal_amz == "soma") {
         resultado = (calc.valor_amz + numero)
@@ -181,7 +183,7 @@ function calculador() {
     }
     detec_tela = 1
     telaExibidora.innerHTML = `${resultado}`
-
+    valor2 = resultado /* talvez tenha que mudar de Number para String aqui */
 }
 
 function limpar(){
