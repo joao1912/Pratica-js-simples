@@ -1,4 +1,5 @@
 let telaExibidora = document.querySelector("div#tela")
+let telaSinal = document.getElementById("sinalExibido")
 
 const um = document.querySelector("div#tec1")
 const dois = document.querySelector("div#tec2")
@@ -28,6 +29,7 @@ let calc = {
     valor_amz: 0,
     sinal_amz: undefined
 }
+
 
 um.addEventListener("click", function(){
     if (detec_tela == 1) {
