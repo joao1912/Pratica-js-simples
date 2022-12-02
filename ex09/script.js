@@ -1,7 +1,6 @@
 let telaExibidora = document.querySelector("span#telaValores")
 let telaSinal = document.getElementById("sinalExibido")
 
-/* telaSinal */
 const um = document.querySelector("div#tec1")
 const dois = document.querySelector("div#tec2")
 const tres = document.querySelector("div#tec3")
@@ -86,11 +85,10 @@ zero.addEventListener("click", function(){
 
 
 dividir.addEventListener("click", function(){
-    
-    
-    if(detectot_sinal == "desativado") {
-        if (sinal == "dividir") {
-            /*telaSinal.innerHTML = `÷`*/          /* VER PORQUE AQUI NAO TEM INNERHTML *ARRUME* */ 
+    telaExibidora.innerHTML = `` 
+    telaSinal.innerHTML = "÷"
+    if(detector_sinal == "desativado") {
+        if (sinal == "dividir") {         
             detector_sinal = "ativado"
             valor = ""
         } else {
@@ -108,9 +106,8 @@ dividir.addEventListener("click", function(){
             valor = ""
         }
         sinal = "dividir"
-        /*troca o sinal exibido na tela*/
+        valor = ""
     }
-
 })
 
 
@@ -171,7 +168,7 @@ function calculador() {
     if (sinal == "dividir") {
         resultado = (Number(valor2) / Number(valor))
     }
-    if(calc.sinal_amz == "soma") {
+    /*if(calc.sinal_amz == "soma") {
         resultado = (calc.valor_amz + numero)
     }
     if(calc.sinal_amz == "subtracao") {
@@ -183,6 +180,7 @@ function calculador() {
     if(calc.sinal_amz == "multiplicacao") {
         resultado = (calc.valor_amz * numero)
     }
+    */
     detec_tela = 1
     telaExibidora.innerHTML = `${resultado}`
     valor2 = resultado /* talvez tenha que mudar de Number para String aqui */
