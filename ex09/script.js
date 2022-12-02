@@ -76,7 +76,7 @@ nove.addEventListener("click", function(){
 })
 
 zero.addEventListener("click", function(){
-    valor += "0"
+    valor += "1"
     numero = 0
     telaExibidora.innerHTML = `${valor}`
 })
@@ -88,7 +88,7 @@ dividir.addEventListener("click", function(){
     
     if(detectot_sinal == "desativado") {
         if (sinal == "dividir") {
-            telaSinal.innerHTML = `÷`          /* VER PORQUE AQUI NAO TEM INNERHTML *ARRUME* */ 
+            /*telaSinal.innerHTML = `÷`*/          /* VER PORQUE AQUI NAO TEM INNERHTML *ARRUME* */ 
             detector_sinal = "ativado"
             valor = ""
         } else {
