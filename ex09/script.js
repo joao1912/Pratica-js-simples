@@ -1,6 +1,7 @@
 let telaExibidora = document.querySelector("span#telaValores")
 let telaSinal = document.getElementById("sinalExibido")
 
+/* telaSinal */
 const um = document.querySelector("div#tec1")
 const dois = document.querySelector("div#tec2")
 const tres = document.querySelector("div#tec3")
@@ -20,43 +21,24 @@ const subtracao = document.getElementById("tecsCalc_subtracao")
 const porcento = document.getElementById("tecsCalc_porcentagem")
 const igual = document.getElementById("tecigual")
 
-let valortot = 0
 let valor = ""
-let numero = 0
-let detec_tela = 0
-
-let calc = {
-    valor_amz: 0,
-    sinal_amz: undefined
-}
+let valor2 = ""
+let sinal = ""
+let detector_sinal = "desativado"
 
 
 um.addEventListener("click", function(){
-    if (detec_tela == 1) {
-        valor = ""
-        detec_tela = 0
-        telaExibidora.innerHTML = ``
-    }
     valor += "1"
-    numero = 1
+    telaExibidora.innerHTML = ``
     telaExibidora.innerHTML = `${valor}`
 })
 
 dois.addEventListener("click", function(){
-    if (detec_tela == 1) {
-        valor = ""
-        detec_tela = 0
-        telaExibidora.innerHTML = ``
-    }
     valor += "2"
-    numero = 2
-    telaExibidora.innerHTML = `${valor}`
 })
 
 tres.addEventListener("click", function(){
-    numero = 3
     valor += "3"
-    telaExibidora.innerHTML = `${valor}`
 })
 
 quatro.addEventListener("click", function(){
@@ -96,7 +78,7 @@ nove.addEventListener("click", function(){
 })
 
 zero.addEventListener("click", function(){
-    valor += "0"
+    valor += "1"
     numero = 0
     telaExibidora.innerHTML = `${valor}`
 })
@@ -104,14 +86,49 @@ zero.addEventListener("click", function(){
 
 
 dividir.addEventListener("click", function(){
-    if (calc.sinal_amz != undefined) {
-        calculador()
+    
+    
+    if(detectot_sinal == "desativado") {
+        if (sinal == "dividir") {
+            /*telaSinal.innerHTML = `÷`*/          /* VER PORQUE AQUI NAO TEM INNERHTML *ARRUME* */ 
+            detector_sinal = "ativado"
+            valor = ""
+        } else {
+            sinal = "dividir"
+            detector_sinal = "ativado"
+            valor2 = valor
+            valor = ""
+            telaExibidora.innerHTML = ``
+            telaExibidora.innerHTML = `${valor2}`
+        } 
     } else {
-        calc.sinal_amz = "divisao"
-        calc.valor_amz = numero
-        valor = ""
+        if(valor != "") {
+            calculador()
+            detector_sinal = "desativado"
+            valor = ""
+        }
+        sinal = "dividir"
+        /*troca o sinal exibido na tela*/
     }
+
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 soma.addEventListener("click", function(){
     if (calc.sinal_amz != undefined) {
@@ -151,8 +168,8 @@ igual.addEventListener("click", function(){
 
 function calculador() {
     let resultado = 0
-    if (calc.sinal_amz == "divisao") {
-        resultado = (calc.valor_amz / numero)
+    if (sinal == "dividir") {
+        resultado = (Number(valor2) / Number(valor))
     }
     if(calc.sinal_amz == "soma") {
         resultado = (calc.valor_amz + numero)
@@ -168,7 +185,7 @@ function calculador() {
     }
     detec_tela = 1
     telaExibidora.innerHTML = `${resultado}`
-
+    valor2 = resultado /* talvez tenha que mudar de Number para String aqui */
 }
 
 function limpar(){
