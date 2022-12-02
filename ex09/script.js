@@ -1,4 +1,4 @@
-let telaExibidora = document.querySelector("div#tela")
+let telaExibidora = document.querySelector("span#telaValores")
 let telaSinal = document.getElementById("sinalExibido")
 
 const um = document.querySelector("div#tec1")
