@@ -168,7 +168,7 @@ function calculador() {
     if (sinal == "dividir") {
         resultado = (Number(valor2) / Number(valor))
     }
-    /*if(calc.sinal_amz == "soma") {
+    if(sinal == "soma") {
         resultado = (calc.valor_amz + numero)
     }
     if(calc.sinal_amz == "subtracao") {
@@ -180,7 +180,7 @@ function calculador() {
     if(calc.sinal_amz == "multiplicacao") {
         resultado = (calc.valor_amz * numero)
     }
-    */
+    
     detec_tela = 1
     telaExibidora.innerHTML = `${resultado}`
     valor2 = resultado /* talvez tenha que mudar de Number para String aqui */
@@ -189,6 +189,7 @@ function calculador() {
 function limpar(){
 
     telaExibidora.innerHTML = ""
+    telaSinal.innerHTML = ""
     valor = ""
     numero = 0
     sinal = ""
