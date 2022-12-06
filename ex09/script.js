@@ -1,6 +1,6 @@
 let telaExibidora = document.querySelector("div#tela")
+let telaSinal = document.getElementById("")/**/ 
 
-/* telaSinal */
 const um = document.querySelector("div#tec1")
 const dois = document.querySelector("div#tec2")
 const tres = document.querySelector("div#tec3")
@@ -84,10 +84,10 @@ zero.addEventListener("click", function(){
 
 
 dividir.addEventListener("click", function(){
-    
-    
+    telaExibidora.innerHTML = `` 
+    telaSinal.innerHTML = "÷"
     if(detector_sinal == "desativado") {
-        if (sinal == "dividir") {
+        if (sinal == "dividir") {         
             detector_sinal = "ativado"
             valor = ""
         } else {
@@ -105,40 +105,115 @@ dividir.addEventListener("click", function(){
             valor = ""
         }
         sinal = "dividir"
-        /*troca o sinal exibido na tela*/
+        valor = ""
     }
-
 })
 
 soma.addEventListener("click", function(){
-    if (calc.sinal_amz != undefined) {
-        calculador()
+    telaExibidora.innerHTML = `` 
+    telaSinal.innerHTML = "+"
+    if(detector_sinal == "desativado") {
+        if (sinal == "soma") {         
+            detector_sinal = "ativado"
+            valor = ""
+        } else {
+            sinal = "soma"
+            detector_sinal = "ativado"
+            valor2 = valor
+            valor = ""
+            telaExibidora.innerHTML = ``
+            telaExibidora.innerHTML = `${valor2}`
+        } 
     } else {
-        calc.sinal_amz = "soma"
-        calc.valor_amz = numero
+        if(valor != "") {
+            calculador()
+            detector_sinal = "desativado"
+            valor = ""
+        }
+        sinal = "soma"
         valor = ""
     }
 })
 
 subtracao.addEventListener("click", function(){
-    if (calc.sinal_amz != undefined) {
-        calculador()
+    telaExibidora.innerHTML = `` 
+    telaSinal.innerHTML = "-"
+    if(detector_sinal == "desativado") {
+        if (sinal == "subtracao") {         
+            detector_sinal = "ativado"
+            valor = ""
+        } else {
+            sinal = "subtracao"
+            detector_sinal = "ativado"
+            valor2 = valor
+            valor = ""
+            telaExibidora.innerHTML = ``
+            telaExibidora.innerHTML = `${valor2}`
+        } 
     } else {
-        calc.sinal_amz = "subtracao"
-        calc.valor_amz = numero
+        if(valor != "") {
+            calculador()
+            detector_sinal = "desativado"
+            valor = ""
+        }
+        sinal = "subtracao"
         valor = ""
     }
 })
 
 porcento.addEventListener("click", function(){
-    if (calc.sinal_amz != undefined) {
-        calculador()
+    telaExibidora.innerHTML = `` 
+    telaSinal.innerHTML = "%"
+    if(detector_sinal == "desativado") {
+        if (sinal == "porcentagem") {         
+            detector_sinal = "ativado"
+            valor = ""
+        } else {
+            sinal = "porcentagem"
+            detector_sinal = "ativado"
+            valor2 = valor
+            valor = ""
+            telaExibidora.innerHTML = ``
+            telaExibidora.innerHTML = `${valor2}`
+        } 
     } else {
-        calc.sinal_amz = "porcentagem"
-        calc.valor_amz = numero
+        if(valor != "") {
+            calculador()
+            detector_sinal = "desativado"
+            valor = ""
+        }
+        sinal = "porcentagem"
         valor = ""
     }
 })
+
+porcento.addEventListener("click", function(){
+    telaExibidora.innerHTML = `` 
+    telaSinal.innerHTML = "%"
+    if(detector_sinal == "desativado") {
+        if (sinal == "porcentagem") {         
+            detector_sinal = "ativado"
+            valor = ""
+        } else {
+            sinal = "porcentagem"
+            detector_sinal = "ativado"
+            valor2 = valor
+            valor = ""
+            telaExibidora.innerHTML = ``
+            telaExibidora.innerHTML = `${valor2}`
+        } 
+    } else {
+        if(valor != "") {
+            calculador()
+            detector_sinal = "desativado"
+            valor = ""
+        }
+        sinal = "porcentagem"
+        valor = ""
+    }
+})
+
+
 
 igual.addEventListener("click", function(){
     calculador()
