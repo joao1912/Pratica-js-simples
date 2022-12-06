@@ -1,5 +1,5 @@
 let telaExibidora = document.querySelector("div#tela")
-let telaSinal = document.getElementById("")/**/ 
+let telaSinal = document.getElementById("sinalExibido")
 
 const um = document.querySelector("div#tec1")
 const dois = document.querySelector("div#tec2")
@@ -19,6 +19,7 @@ const soma = document.getElementById("tecsCalc_soma")
 const subtracao = document.getElementById("tecsCalc_subtracao")
 const porcento = document.getElementById("tecsCalc_porcentagem")
 const igual = document.getElementById("tecigual")
+const multiplicacao = document.getElementById("tecMultiplica")
 
 let valor = ""
 let valor2 = ""
@@ -33,51 +34,55 @@ um.addEventListener("click", function(){
 
 dois.addEventListener("click", function(){
     valor += "2"
+    telaExibidora.innerHTML = ``
+    telaExibidora.innerHTML = `${valor}`
 })
 
 tres.addEventListener("click", function(){
     valor += "3"
+    telaExibidora.innerHTML = ``
+    telaExibidora.innerHTML = `${valor}`
 })
 
 quatro.addEventListener("click", function(){
     valor += "4"
-    numero = 4
+    telaExibidora.innerHTML = ``
     telaExibidora.innerHTML = `${valor}`
 })
 
 cinco.addEventListener("click", function(){
     valor += "5"
-    numero = 5
+    telaExibidora.innerHTML = ``
     telaExibidora.innerHTML = `${valor}`
 })
 
 seis.addEventListener("click", function(){
     valor += "6"
-    numero = 6
+    telaExibidora.innerHTML = ``
     telaExibidora.innerHTML = `${valor}`
 })
 
 sete.addEventListener("click", function(){
     valor += "7"
-    numero = 7
+    telaExibidora.innerHTML = ``
     telaExibidora.innerHTML = `${valor}`
 })
 
 oito.addEventListener("click", function(){
     valor += "8"
-    numero = 8
+    telaExibidora.innerHTML = ``
     telaExibidora.innerHTML = `${valor}`
 })
 
 nove.addEventListener("click", function(){
     valor += "9"
-    numero = 9
+    telaExibidora.innerHTML = ``
     telaExibidora.innerHTML = `${valor}`
 })
 
 zero.addEventListener("click", function(){
-    valor += "1"
-    numero = 0
+    valor += "0"
+    telaExibidora.innerHTML = ``
     telaExibidora.innerHTML = `${valor}`
 })
 
@@ -187,15 +192,15 @@ porcento.addEventListener("click", function(){
     }
 })
 
-porcento.addEventListener("click", function(){
+multiplicacao.addEventListener("click", function(){
     telaExibidora.innerHTML = `` 
-    telaSinal.innerHTML = "%"
+    telaSinal.innerHTML = "X"
     if(detector_sinal == "desativado") {
-        if (sinal == "porcentagem") {         
+        if (sinal == "multiplicacao") {         
             detector_sinal = "ativado"
             valor = ""
         } else {
-            sinal = "porcentagem"
+            sinal = "multiplicacao"
             detector_sinal = "ativado"
             valor2 = valor
             valor = ""
@@ -208,7 +213,7 @@ porcento.addEventListener("click", function(){
             detector_sinal = "desativado"
             valor = ""
         }
-        sinal = "porcentagem"
+        sinal = "multiplicacao"
         valor = ""
     }
 })
@@ -226,17 +231,17 @@ function calculador() {
     if (sinal == "dividir") {
         resultado = (Number(valor2) / Number(valor))
     }
-    if(calc.sinal_amz == "soma") {
-        resultado = (calc.valor_amz + numero)
+    if(sinal == "soma") {
+        resultado = (Number(valor2) + Number(valor))
     }
     if(calc.sinal_amz == "subtracao") {
-        resultado = (calc.valor_amz - numero)
+        resultado = (Number(valor2) - Number(valor))
     }
     if(calc.sinal_amz == "porcentagem") {
-        resultado = ((calc.valor_amz * numero) / 100)
+        resultado = (Number(valor2) * Number(valor)) / 100
     }
     if(calc.sinal_amz == "multiplicacao") {
-        resultado = (calc.valor_amz * numero)
+        resultado = (Number(valor2) * Number(valor))
     }
     detec_tela = 1
     telaExibidora.innerHTML = `${resultado}`
@@ -245,11 +250,10 @@ function calculador() {
 
 function limpar(){
 
+    telaSinal.innerHTML = ""
     telaExibidora.innerHTML = ""
     valor = ""
     numero = 0
     sinal = ""
-    calc.valor_amz = 0
-    calc.sinal_amz = undefined
 }
 
