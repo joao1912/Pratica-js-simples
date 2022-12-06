@@ -86,9 +86,8 @@ zero.addEventListener("click", function(){
 dividir.addEventListener("click", function(){
     
     
-    if(detectot_sinal == "desativado") {
+    if(detector_sinal == "desativado") {
         if (sinal == "dividir") {
-            /*telaSinal.innerHTML = `÷`*/          /* VER PORQUE AQUI NAO TEM INNERHTML *ARRUME* */ 
             detector_sinal = "ativado"
             valor = ""
         } else {
@@ -110,23 +109,6 @@ dividir.addEventListener("click", function(){
     }
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 soma.addEventListener("click", function(){
     if (calc.sinal_amz != undefined) {
