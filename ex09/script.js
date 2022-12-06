@@ -117,7 +117,6 @@ soma.addEventListener("click", function(){
     telaExibidora.innerHTML = `` 
     telaSinal.innerHTML = "+"
     if(detector_sinal == "desativado") {
-        alert("ta desativado")
         if (sinal == "soma") {         
             detector_sinal = "ativado"
             valor = ""
