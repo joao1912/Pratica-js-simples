@@ -1,4 +1,4 @@
-let telaExibidora = document.querySelector("div#tela")
+let telaExibidora = document.querySelector("span#telaValores")
 let telaSinal = document.getElementById("sinalExibido")
 
 const um = document.querySelector("div#tec1")
@@ -101,7 +101,6 @@ dividir.addEventListener("click", function(){
             valor2 = valor
             valor = ""
             telaExibidora.innerHTML = ``
-            telaExibidora.innerHTML = `${valor2}`
         } 
     } else {
         if(valor != "") {
@@ -118,6 +117,7 @@ soma.addEventListener("click", function(){
     telaExibidora.innerHTML = `` 
     telaSinal.innerHTML = "+"
     if(detector_sinal == "desativado") {
+        alert("ta desativado")
         if (sinal == "soma") {         
             detector_sinal = "ativado"
             valor = ""
@@ -127,7 +127,6 @@ soma.addEventListener("click", function(){
             valor2 = valor
             valor = ""
             telaExibidora.innerHTML = ``
-            telaExibidora.innerHTML = `${valor2}`
         } 
     } else {
         if(valor != "") {
@@ -153,7 +152,6 @@ subtracao.addEventListener("click", function(){
             valor2 = valor
             valor = ""
             telaExibidora.innerHTML = ``
-            telaExibidora.innerHTML = `${valor2}`
         } 
     } else {
         if(valor != "") {
@@ -179,7 +177,6 @@ porcento.addEventListener("click", function(){
             valor2 = valor
             valor = ""
             telaExibidora.innerHTML = ``
-            telaExibidora.innerHTML = `${valor2}`
         } 
     } else {
         if(valor != "") {
@@ -205,7 +202,6 @@ multiplicacao.addEventListener("click", function(){
             valor2 = valor
             valor = ""
             telaExibidora.innerHTML = ``
-            telaExibidora.innerHTML = `${valor2}`
         } 
     } else {
         if(valor != "") {
@@ -221,7 +217,10 @@ multiplicacao.addEventListener("click", function(){
 
 
 igual.addEventListener("click", function(){
+    telaSinal.innerHTML = ""
     calculador()
+    valor = ""
+    sinal = ""
 })
 
 
@@ -234,13 +233,13 @@ function calculador() {
     if(sinal == "soma") {
         resultado = (Number(valor2) + Number(valor))
     }
-    if(calc.sinal_amz == "subtracao") {
+    if(sinal == "subtracao") {
         resultado = (Number(valor2) - Number(valor))
     }
-    if(calc.sinal_amz == "porcentagem") {
+    if(sinal == "porcentagem") {
         resultado = (Number(valor2) * Number(valor)) / 100
     }
-    if(calc.sinal_amz == "multiplicacao") {
+    if(sinal == "multiplicacao") {
         resultado = (Number(valor2) * Number(valor))
     }
     detec_tela = 1
@@ -253,7 +252,8 @@ function limpar(){
     telaSinal.innerHTML = ""
     telaExibidora.innerHTML = ""
     valor = ""
-    numero = 0
+    valor2 = ""
     sinal = ""
+    detector_sinal = "desativado"
 }
 
