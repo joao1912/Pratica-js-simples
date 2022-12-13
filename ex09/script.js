@@ -130,7 +130,7 @@ soma.addEventListener("click", function(){
     } else {
         if(valor != "") {
             calculador()
-            detector_sinal = "desativado"
+            /*detector_sinal = "desativado"*/
             valor = ""
         }
         sinal = "soma"
@@ -241,9 +241,9 @@ function calculador() {
     if(sinal == "multiplicacao") {
         resultado = (Number(valor2) * Number(valor))
     }
-    detec_tela = 1
     telaExibidora.innerHTML = `${resultado}`
-    valor2 = resultado /* talvez tenha que mudar de Number para String aqui */
+    valor2 = String(resultado) 
+    
 }
 
 function limpar(){
