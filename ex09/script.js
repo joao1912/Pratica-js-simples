@@ -105,7 +105,6 @@ dividir.addEventListener("click", function(){
     } else {
         if(valor != "") {
             calculador()
-            detector_sinal = "desativado"
             valor = ""
         }
         sinal = "dividir"
