@@ -12,7 +12,7 @@ const oito = document.querySelector("div#tec8")
 const nove = document.querySelector("div#tec9")
 const zero  = document.querySelector("div#tec0")
 const maisMenos = document.querySelector("div#trocaSinal")
-const ponto = document.querySelector("div#ponto")
+const ponto = document.querySelector("div#tecponto")
 
 const dividir = document.getElementById("tecsCalc_divisao")
 const soma = document.getElementById("tecsCalc_soma")
@@ -25,6 +25,7 @@ let valor = ""
 let valor2 = ""
 let sinal = ""
 let detector_sinal = "desativado"
+let detec_valor = 0
 
 um.addEventListener("click", function(){
     valor += "1"
@@ -130,7 +131,6 @@ soma.addEventListener("click", function(){
     } else {
         if(valor != "") {
             calculador()
-            /*detector_sinal = "desativado"*/
             valor = ""
         }
         sinal = "soma"
@@ -155,7 +155,6 @@ subtracao.addEventListener("click", function(){
     } else {
         if(valor != "") {
             calculador()
-            detector_sinal = "desativado"
             valor = ""
         }
         sinal = "subtracao"
@@ -180,7 +179,6 @@ porcento.addEventListener("click", function(){
     } else {
         if(valor != "") {
             calculador()
-            detector_sinal = "desativado"
             valor = ""
         }
         sinal = "porcentagem"
@@ -205,7 +203,6 @@ multiplicacao.addEventListener("click", function(){
     } else {
         if(valor != "") {
             calculador()
-            detector_sinal = "desativado"
             valor = ""
         }
         sinal = "multiplicacao"
@@ -213,11 +210,31 @@ multiplicacao.addEventListener("click", function(){
     }
 })
 
+maisMenos.addEventListener("click", function(){
+    telaExibidora.innerHTML = ""
+    if(detec_valor == 0) {
+    valor = Number(valor) * -1
+    telaExibidora.innerHTML = valor
+    } else {
+        valor2 = Number(valor2) * -1
+        telaExibidora.innerHTML = valor2
+    }
+})
+
+
+ponto.addEventListener("click", function(){
+    telaExibidora.innerHTML = ""
+    let valorTemp = ""
+    valorTemp = valor + "."
+    valor = valorTemp
+    telaExibidora.innerHTML = valor
+})
 
 
 igual.addEventListener("click", function(){
     telaSinal.innerHTML = ""
     calculador()
+    detec_valor = 1
     valor = ""
     sinal = ""
 })
