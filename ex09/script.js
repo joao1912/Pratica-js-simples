@@ -25,6 +25,7 @@ let valor = ""
 let valor2 = ""
 let sinal = ""
 let detector_sinal = "desativado"
+let detec_valor = 0
 
 um.addEventListener("click", function(){
     valor += "1"
@@ -211,8 +212,8 @@ multiplicacao.addEventListener("click", function(){
 maisMenos.addEventListener("click", function(){
     telaExibidora.innerHTML = ""
     if(detec_valor == 0) {
-    valor = Number(valor) * -1
-    telaExibidora.innerHTML = valor
+        valor = Number(valor) * -1
+        telaExibidora.innerHTML = valor
     } else {
         valor2 = Number(valor2) * -1
         telaExibidora.innerHTML = valor2
