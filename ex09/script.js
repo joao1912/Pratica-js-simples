@@ -245,8 +245,8 @@ function calculador() {
     if (sinal == "dividir") {
         resultado = (Number(valor2) / Number(valor))
     }
-    if(calc.sinal_amz == "soma") {
-        resultado = (calc.valor_amz + numero)
+    if(sinal == "soma") {
+        resultado = (Number(valor2) + Number(valor))
     }
     if(sinal == "subtracao") {
         resultado = (Number(valor2) - Number(valor))
