@@ -25,6 +25,7 @@ let valor = ""
 let valor2 = ""
 let sinal = ""
 let detector_sinal = "desativado"
+let detec_valor = 0
 
 um.addEventListener("click", function(){
     valor += "1"
