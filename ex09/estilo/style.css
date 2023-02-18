@@ -14,12 +14,14 @@ body {
 
 }
 
-header {
-    background-color: lightgray;
+header { 
+    color: white;
+    text-shadow: 1px 1px 4px rgba(211, 211, 211, 0.416);
+    text-decoration: underline;
     padding: 20px;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.364);
-    width: 90vw;
+    font-weight: bold;
     margin: auto;
+    width: 90vw;
     margin-bottom: 60px;
     margin-top: 10px;
     border-radius: 10px;
@@ -40,6 +42,7 @@ main {
     padding-top: 20px;
     font-size: 1.8em;
     font-weight: bolder;
+    border: 2px solid rgba(210, 180, 140, 0.575);
     box-shadow: 0px 0px 5px rgba(72, 71, 71, 0.585);
 }
 
